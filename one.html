@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One</title>
+</head>
+
+<body>
+    <h1>Task 1</h1>
+
+    <form id="myForm">
+        <input type="text" id="myName" placeholder="Enter your name">
+        <input type="text" id="myEmail" placeholder="Enter your email">
+        <input type="text" id="myPassword" placeholder="Enter your Password">
+        <button id="displayData">Sumbit</button>
+    </form>
+
+    <script>
+        const myForm = document.querySelector('#myForm')
+        const myName = document.querySelector('#myName')
+        const myEmail = document.querySelector('#myEmail')
+        const myPassword = document.querySelector('#myPassword')
+        const displayData = document.querySelector('#displayData')
+
+        displayData.addEventListener('click', (e) => {
+            if (myName.value === '') {
+                alert("Write something")
+            }
+            else {
+                e.preventDefault()
+                myForm.style.display = "none";
+                const renderData = document.createElement("h2")
+                renderData.innerHTML = `
+                Name: ${myName.value} <br/>
+                Email: ${myEmail.value} <br/>
+                Password: ${myPassword.value} <br/>
+            `
+                document.body.appendChild(renderData)
+            }
+        })
+    </script>
+
+</body>
+
+</html>

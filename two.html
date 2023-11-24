@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two</title>
+</head>
+
+<body>
+
+    <h1>Paragrap:</h1>
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consequatur iste unde nesciunt tempore
+            molestias provident sunt veritatis. Amet, doloribus? Maxime, quo!</p>
+        <a style="cursor: pointer; text-decoration: underline;">See more..</a>
+    </div>
+
+    
+    <script>
+        const para = document.querySelector('p')
+        const seemore = document.querySelector('a')
+
+        console.log(seemore);
+
+        seemore.addEventListener('click',()=>{
+            seemore.style.display = 'none'
+            para.innerHTML = `${para.innerHTML} "Placeat consequatur iste unde nesciunt tempore molestias provident sunt veritatis"` 
+        })
+
+    </script>
+</body>
+
+</html>
